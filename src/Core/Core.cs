@@ -26,7 +26,9 @@ public class Core
 
     public static void ExecuteGame(string game)
     {
-        Process.Start("KeyboardSplitter.exe", $"game=\"{game}\"");
+        // BUG: When the KeyboardSplitter is called from the app, it cannot find the game
+        // Process.Start("KeyboardSplitter.exe", $"game=\"{game}\"");
+        File.WriteAllText("start.bat", $"KeyboardSplitter.exe game=\"{game}\"");
     }
 }
 

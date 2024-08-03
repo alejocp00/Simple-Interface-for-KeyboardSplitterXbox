@@ -8,18 +8,18 @@ public class AxisInfo
     /// <summary>
     /// Represents the id of the axis
     /// </summary>
-    public string Id { get; set; }
+    public GamePadActuator Id { get; set; }
 
     /// <summary>
     /// Represents the value of the axis
     /// </summary>
-    public string Value { get; set; }
+    public AxisInfo Value { get; set; }
     /// <summary>
     /// Represents the keyboard key of the axis
     /// </summary>
     public string KeyboardKey { get; set; }
 
-    public AxisInfo(string id, string value, string kKey)
+    public AxisInfo(GamePadActuator id, AxisInfo value, string kKey)
     {
         Id = id;
         Value = value;

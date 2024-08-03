@@ -8,13 +8,13 @@ public class ButtonInfo
     /// <summary>
     /// Represents the id of the button in the xml preset
     /// </summary>
-    public string Id { get; set; }
+    public GamePadActuator Id { get; set; }
     /// <summary>
     /// Represents the keyboard key of the button
     /// </summary>
     public string KeyboardKey { get; set; }
 
-    public ButtonInfo(string id, string kKey)
+    public ButtonInfo(GamePadActuator id, string kKey)
     {
         Id = id;
         KeyboardKey = kKey;

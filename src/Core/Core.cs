@@ -16,7 +16,9 @@ public class Core
         {
             if (reader.Name == "Game")
             {
-                games.Add(reader.GetAttribute("Title")!);
+                string title = reader.GetAttribute("Title")!;
+                if (!string.IsNullOrWhiteSpace(title))
+                    games.Add(title);
             }
         }
         return games;
